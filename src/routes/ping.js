@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
     let pingService = new PingService();
     let pingController = new PingController(pingService);
     let ret = pingController.pong();
-    res.send(ret);  
+    res.status(200).json(ret); 
 });
 
 module.exports = router;
